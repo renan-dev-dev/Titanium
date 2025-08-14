@@ -5,6 +5,26 @@
     <link rel="icon" type="image/svg+xml" href="./src/assets/images/apple.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apple iPhone</title>
+    <script>
+      // Força scroll em dispositivos móveis
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.innerWidth <= 768) {
+          document.documentElement.style.overflowY = 'scroll';
+          document.body.style.overflowY = 'scroll';
+          document.body.style.height = 'auto';
+          document.body.style.minHeight = '100vh';
+          document.body.style.touchAction = 'auto';
+          document.body.style.webkitOverflowScrolling = 'touch';
+          
+          const root = document.getElementById('root');
+          if (root) {
+            root.style.overflowY = 'visible';
+            root.style.height = 'auto';
+            root.style.minHeight = '100vh';
+          }
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>

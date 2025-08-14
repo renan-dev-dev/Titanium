@@ -8,6 +8,13 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  scroll-behavior: smooth;
+}
+
 body {
   color: white;
   overflow-x: hidden;
@@ -15,21 +22,43 @@ body {
   background: #000;
   border-color: #3b3b3b;
   min-height: 100vh;
+  height: auto;
+  position: relative;
+}
+
+#root {
+  overflow-x: hidden;
+  overflow-y: visible;
+  min-height: 100vh;
+  height: auto;
 }
 
 /* Força scroll em dispositivos móveis */
 @media (max-width: 768px) {
-  html, body {
+  html {
     overflow-y: scroll !important;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch !important;
     height: auto !important;
-    min-height: 100vh;
+    min-height: 100vh !important;
+  }
+  
+  body {
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    position: static !important;
   }
   
   #root {
     overflow-y: visible !important;
     height: auto !important;
-    min-height: 100vh;
+    min-height: 100vh !important;
+    position: static !important;
+  }
+  
+  * {
+    touch-action: auto !important;
   }
 }
 

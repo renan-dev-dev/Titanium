@@ -28,8 +28,8 @@ const Hero = () => {
   }, [])
 
   return (
-    <section className="w-full nav-height bg-black relative">
-      <div className="h-5/6 w-full flex-center flex-col">
+    <section className="w-full bg-black relative" style={{ minHeight: 'calc(60vh)', maxHeight: '90vh' }}>
+      <div className="h-5/6 w-full flex-center flex-col py-8">
         <p id="hero" className="hero-title">iPhone 15 Pro</p>
         <div className="md:w-10/12 w-9/12">
           <video className="pointer-events-none" autoPlay muted playsInline={true} key={videoSrc}>
@@ -40,12 +40,12 @@ const Hero = () => {
 
       <div
         id="cta"
-        className="flex flex-col items-center opacity-0 translate-y-20"
+        className="flex flex-col items-center opacity-0 translate-y-20 pb-8"
       >
         <a href="#highlights" className="btn">Comprar</a>
         <p className="font-normal text-xl">Garante já o seu</p>
         <div className="mt-4 md:hidden">
-          <p className="text-gray-400 text-sm">↓ Role para baixo para ver mais ↓</p>
+          <p className="text-gray-400 text-sm animate-bounce">↓ Role para ver mais ↓</p>
         </div>
       </div>
     </section>
