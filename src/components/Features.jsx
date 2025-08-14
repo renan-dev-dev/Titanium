@@ -32,7 +32,7 @@ const Features = () => {
   }, []);
 
   return (
-    <section className="h-full common-padding bg-zinc relative">
+    <section className="min-h-screen common-padding bg-zinc relative">
       <div className="screen-max-wdith">
         <div className="mb-12 w-full">
           <h1 id="features_title" className="section-heading">Explore a história completa.</h1>

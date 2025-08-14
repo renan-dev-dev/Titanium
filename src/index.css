@@ -14,6 +14,23 @@ body {
   overflow-y: auto;
   background: #000;
   border-color: #3b3b3b;
+  min-height: 100vh;
+}
+
+/* Força scroll em dispositivos móveis */
+@media (max-width: 768px) {
+  html, body {
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch;
+    height: auto !important;
+    min-height: 100vh;
+  }
+  
+  #root {
+    overflow-y: visible !important;
+    height: auto !important;
+    min-height: 100vh;
+  }
 }
 
 .screen-max-width {
