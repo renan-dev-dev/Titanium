@@ -60,7 +60,7 @@ const Model = () => {
         </h1>
 
         <div className="flex flex-col items-center mt-5">
-          <div className="w-full h-[75vh] md:h-[90vh] overflow-hidden relative">
+          <div className="w-full h-[75vh] md:h-[90vh] relative">
             <ModelView 
               index={1}
               groupRef={small}
@@ -84,11 +84,7 @@ const Model = () => {
             <Canvas
               className="w-full h-full"
               style={{
-                position: 'fixed',
-                top: 0,
-                bottom: 0,
-                left: 0,
-                right: 0,
+                position: 'relative',
                 overflow: 'hidden'
               }}
               eventSource={document.getElementById('root')}
