@@ -60,6 +60,32 @@ body {
   * {
     touch-action: auto !important;
   }
+  
+  /* Força barra de scroll visível no mobile */
+  ::-webkit-scrollbar {
+    width: 8px !important;
+    display: block !important;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 4px !important;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4) !important;
+    border-radius: 4px !important;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.6) !important;
+  }
+  
+  /* Fallback para Firefox */
+  * {
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.1) !important;
+  }
 }
 
 .screen-max-width {
