@@ -43,7 +43,10 @@ const Hero = () => {
         className="flex flex-col items-center opacity-0 translate-y-20"
       >
         <a href="#highlights" className="btn">Comprar</a>
-        <p className="font-normal text-xl">Garanta já o seu</p>
+        <p className="font-normal text-xl">Garante já o seu</p>
+        <div className="mt-4 md:hidden">
+          <p className="text-gray-400 text-sm">↓ Role para baixo para ver mais ↓</p>
+        </div>
       </div>
     </section>
   )
