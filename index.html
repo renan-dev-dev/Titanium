@@ -5,8 +5,28 @@
     <link rel="icon" type="image/svg+xml" href="/Titanium/assets/apple-DQXtOrig.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apple iPhone</title>
-    <script type="module" crossorigin src="/Titanium/assets/index-Bp8EztCa.js"></script>
-    <link rel="stylesheet" crossorigin href="/Titanium/assets/index-CJQC6u57.css">
+    <script>
+      // Força scroll em dispositivos móveis
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.innerWidth <= 768) {
+          document.documentElement.style.overflowY = 'scroll';
+          document.body.style.overflowY = 'scroll';
+          document.body.style.height = 'auto';
+          document.body.style.minHeight = '100vh';
+          document.body.style.touchAction = 'auto';
+          document.body.style.webkitOverflowScrolling = 'touch';
+          
+          const root = document.getElementById('root');
+          if (root) {
+            root.style.overflowY = 'visible';
+            root.style.height = 'auto';
+            root.style.minHeight = '100vh';
+          }
+        }
+      });
+    </script>
+    <script type="module" crossorigin src="/Titanium/assets/index-Dby9MAQ_.js"></script>
+    <link rel="stylesheet" crossorigin href="/Titanium/assets/index-B9bCmkvj.css">
   </head>
   <body>
     <div id="root"></div>
