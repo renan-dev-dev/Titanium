@@ -16,17 +16,35 @@
           document.body.style.touchAction = 'auto';
           document.body.style.webkitOverflowScrolling = 'touch';
           
+          // Força barra de scroll visível
+          document.documentElement.style.scrollbarWidth = 'thin';
+          document.body.style.scrollbarWidth = 'thin';
+          
           const root = document.getElementById('root');
           if (root) {
             root.style.overflowY = 'visible';
             root.style.height = 'auto';
             root.style.minHeight = '100vh';
           }
+          
+          // Adiciona conteúdo extra temporário para garantir scroll
+          const tempDiv = document.createElement('div');
+          tempDiv.style.height = '50px';
+          tempDiv.style.backgroundColor = 'transparent';
+          tempDiv.style.width = '100%';
+          document.body.appendChild(tempDiv);
+          
+          // Remove após 2 segundos
+          setTimeout(() => {
+            if (tempDiv.parentNode) {
+              tempDiv.parentNode.removeChild(tempDiv);
+            }
+          }, 2000);
         }
       });
     </script>
-    <script type="module" crossorigin src="/Titanium/assets/index-Dby9MAQ_.js"></script>
-    <link rel="stylesheet" crossorigin href="/Titanium/assets/index-B9bCmkvj.css">
+    <script type="module" crossorigin src="/Titanium/assets/index-DQSj2cm7.js"></script>
+    <link rel="stylesheet" crossorigin href="/Titanium/assets/index-DKeJ23vn.css">
   </head>
   <body>
     <div id="root"></div>
