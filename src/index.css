@@ -11,6 +11,7 @@
 body {
   color: white;
   overflow-x: hidden;
+  overflow-y: auto;
   background: #000;
   border-color: #3b3b3b;
 }
